@@ -5,83 +5,61 @@ const RightBar = () => {
     <div className="rightBar">
       <div className="container">
         <div className="item">
-          <span>Suggestions For You</span>
+          <span>Friend Requests</span>
           <div className="user">
             <div className="userInfo">
-              <img
-                src="https://images.pexels.com/photos/4881619/pexels-photo-4881619.jpeg?auto=compress&cs=tinysrgb&w=1600"
-                alt=""
-              />
-              <span>Jane Doe</span>
+              <img src="./pictures/erick.jpg" alt="" />
+              <span>Erick Lover</span>
             </div>
             <div className="buttons">
-              <button>follow</button>
-              <button>dismiss</button>
+              <button>Confirm</button>
+              <button>Delete</button>
             </div>
           </div>
           <div className="user">
             <div className="userInfo">
-              <img
-                src="https://images.pexels.com/photos/4881619/pexels-photo-4881619.jpeg?auto=compress&cs=tinysrgb&w=1600"
-                alt=""
-              />
-              <span>Jane Doe</span>
+              <img src="./pictures/marie.jpg" alt="" />
+              <span>Cutie Marie</span>
             </div>
             <div className="buttons">
-              <button>follow</button>
-              <button>dismiss</button>
+              <button>Confirm</button>
+              <button>Delete</button>
             </div>
           </div>
         </div>
         <div className="item">
-          <span>Latest Activities</span>
+          <span>Sponsored</span>
           <div className="user">
             <div className="userInfo">
-              <img
-                src="https://images.pexels.com/photos/4881619/pexels-photo-4881619.jpeg?auto=compress&cs=tinysrgb&w=1600"
-                alt=""
-              />
+              <img src="./pictures/lv.png" alt="" />
               <p>
-                <span>Jane Doe</span> changed their cover picture
+                <span>Louis Vuitton</span> louisvuitton.com
               </p>
             </div>
-            <span>1 min ago</span>
           </div>
           <div className="user">
             <div className="userInfo">
-              <img
-                src="https://images.pexels.com/photos/4881619/pexels-photo-4881619.jpeg?auto=compress&cs=tinysrgb&w=1600"
-                alt=""
-              />
+              <img src="./pictures/chanel.jpg" alt="" />
               <p>
-                <span>Jane Doe</span> changed their cover picture
+                <span>Chanel</span> chanel.com
               </p>
             </div>
-            <span>1 min ago</span>
           </div>
           <div className="user">
             <div className="userInfo">
-              <img
-                src="https://images.pexels.com/photos/4881619/pexels-photo-4881619.jpeg?auto=compress&cs=tinysrgb&w=1600"
-                alt=""
-              />
+              <img src="./pictures/lam.jpg" alt="" />
               <p>
-                <span>Jane Doe</span> changed their cover picture
+                <span>Lamborghini</span> lamborghini.com
               </p>
             </div>
-            <span>1 min ago</span>
           </div>
           <div className="user">
             <div className="userInfo">
-              <img
-                src="https://images.pexels.com/photos/4881619/pexels-photo-4881619.jpeg?auto=compress&cs=tinysrgb&w=1600"
-                alt=""
-              />
+              <img src="./pictures/dior.jpg" alt="" />
               <p>
-                <span>Jane Doe</span> changed their cover picture
+                <span>Dior</span> dior.com
               </p>
             </div>
-            <span>1 min ago</span>
           </div>
         </div>
         <div className="item">
