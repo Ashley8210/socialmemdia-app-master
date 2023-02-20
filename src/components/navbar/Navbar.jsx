@@ -16,19 +16,19 @@ const Navbar = () => {
   const { toggle, darkMode } = useContext(DarkModeContext);
   const { user, setUser } = useContext(AuthContext);
   const navigate = useNavigate();
-  
+
   const handleLogout = () => {
     setUser({
       id: null,
       name: "",
       email: "",
       password: "",
-      profilePic: "https://res.cloudinary.com/mytrainingschool/image/upload/v1661717512/ef0igyp7wj1zmwaqtyc0.jpg",
-      isLoggedIn: false
-    })
+      profilePic: "./pictures/ash.jpg",
+      isLoggedIn: false,
+    });
 
-    navigate('/login')
-  }
+    navigate("/login");
+  };
 
   return (
     <div className="navbar">
@@ -53,25 +53,23 @@ const Navbar = () => {
         <EmailOutlinedIcon />
         <NotificationsOutlinedIcon />
         <div className="user dropdown show mr-5">
-          <span 
-              className="dropdown-toggle"
-              id="dropdownMenuLink" 
-              data-toggle="dropdown" 
-              aria-haspopup="true" 
-              aria-expanded="false" 
-            >
-            <img
-                src={user.profilePic}
-                alt=""
-              />
+          <span
+            className="dropdown-toggle"
+            id="dropdownMenuLink"
+            data-toggle="dropdown"
+            aria-haspopup="true"
+            aria-expanded="false"
+          >
+            <img src={user.profilePic} alt="" />
           </span>
-          
+
           <span>{user.name}</span>
           <div className="dropdown-menu" aria-labelledby="dropdownMenuLink">
-              <button className="dropdown-item" onClick={handleLogout}>Logout</button>
+            <button className="dropdown-item" onClick={handleLogout}>
+              Logout
+            </button>
           </div>
         </div>
-        
       </div>
     </div>
   );

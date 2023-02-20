@@ -4,54 +4,49 @@ import { AuthContext } from "../../context/authContext";
 import "./login.scss";
 
 const Login = () => {
-  const {user, setUser} = useContext(AuthContext)
+  const { user, setUser } = useContext(AuthContext);
 
-  const navigate = useNavigate()
+  const navigate = useNavigate();
 
-  const [email, setEmail] = useState('')
-  const [password, setPassword] = useState('')
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
 
   const handleLogin = async (e) => {
     e.preventDefault();
-    
-    if(!user.isLoggedIn){
-      console.log('if codeblock')
 
-        const existingUser = await fetch('https://socialmedia-server-ws6f.vercel.app/api/login', {
+    if (!user.isLoggedIn) {
+      console.log("if codeblock");
+
+      const existingUser = await fetch(
+        "https://socialmedia-server-ws6f.vercel.app/api/login",
+        {
           method: "POST",
           headers: {
-            "Content-Type": "application/json"
+            "Content-Type": "application/json",
           },
           body: JSON.stringify({
-            email: email
-          })
-        })
-        .then(response => response.json())
-        console.log(existingUser)
-      
+            email: email,
+          }),
+        }
+      ).then((response) => response.json());
+      console.log(existingUser);
+
       setUser({
         id: existingUser._id,
         name: existingUser.name,
         email: existingUser.email,
         password: existingUser.password,
-        profilePic: "https://res.cloudinary.com/mytrainingschool/image/upload/v1661717512/ef0igyp7wj1zmwaqtyc0.jpg",
-        isLoggedIn: true
-      })
+        profilePic: "./pictures/ash.jpg",
+        isLoggedIn: true,
+      });
 
-      alert('Logged in successfully')
+      alert("Logged in successfully");
 
-      navigate('/');
-
-      
-
+      navigate("/");
     } else {
-      alert('user exists!')
+      alert("user exists!");
     }
-    
-    
-  }
-
-
+  };
 
   return (
     <div className="login">
@@ -71,8 +66,16 @@ const Login = () => {
         <div className="right">
           <h1>Login</h1>
           <form>
-            <input type="email" placeholder="Email" onChange={(e) => setEmail(e.target.value)} />
-            <input type="password" placeholder="Password" onChange={(e) => setPassword(e.target.value)}/>
+            <input
+              type="email"
+              placeholder="Email"
+              onChange={(e) => setEmail(e.target.value)}
+            />
+            <input
+              type="password"
+              placeholder="Password"
+              onChange={(e) => setPassword(e.target.value)}
+            />
             <button onClick={(e) => handleLogin(e)}>Login</button>
           </form>
         </div>
