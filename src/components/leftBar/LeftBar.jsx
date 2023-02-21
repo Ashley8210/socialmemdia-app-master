@@ -2,16 +2,12 @@ import "./leftBar.scss";
 import Friends from "../../assets/laugh.png";
 import Groups from "../../assets/teamwork.png";
 import Market from "../../assets/retailer.png";
-import Watch from "../../assets/4.png";
-import Memories from "../../assets/5.png";
-import Events from "../../assets/6.png";
-import Gaming from "../../assets/7.png";
-import Gallery from "../../assets/8.png";
-import Videos from "../../assets/9.png";
-import Messages from "../../assets/10.png";
-import Tutorials from "../../assets/11.png";
-import Courses from "../../assets/12.png";
-import Fund from "../../assets/13.png";
+import Watch from "../../assets/facebook.png";
+import Events from "../../assets/planner.png";
+import Gaming from "../../assets/game-console.png";
+import Gallery from "../../assets/gallery.png";
+import Videos from "../../assets/video.png";
+import Messages from "../../assets/comments.png";
 import { AuthContext } from "../../context/authContext";
 import { useContext } from "react";
 
@@ -35,58 +31,40 @@ const LeftBar = () => {
             <span>Groups</span>
           </div>
           <div className="item">
-            <img src={Market} alt="" />
-            <span>Marketplace</span>
+            <img src={Messages} alt="" />
+            <span>Messages</span>
           </div>
           <div className="item">
             <img src={Watch} alt="" />
             <span>Watch</span>
-          </div>
-          <div className="item">
-            <img src={Memories} alt="" />
-            <span>Memories</span>
-          </div>
-        </div>
-        <hr />
-        <div className="menu">
-          <span>Your shortcuts</span>
-          <div className="item">
-            <img src={Events} alt="" />
-            <span>Events</span>
-          </div>
-          <div className="item">
-            <img src={Gaming} alt="" />
-            <span>Gaming</span>
-          </div>
-          <div className="item">
-            <img src={Gallery} alt="" />
-            <span>Gallery</span>
-          </div>
-          <div className="item">
-            <img src={Videos} alt="" />
-            <span>Videos</span>
-          </div>
-          <div className="item">
-            <img src={Messages} alt="" />
-            <span>Messages</span>
           </div>
         </div>
         <hr />
         <div className="menu">
           <span>Others</span>
           <div className="item">
-            <img src={Fund} alt="" />
-            <span>Fundraiser</span>
+            <img src={Events} alt="" />
+            <span>Events</span>
           </div>
           <div className="item">
-            <img src={Tutorials} alt="" />
-            <span>Tutorials</span>
+            <img src={Videos} alt="" />
+            <span>Videos</span>
           </div>
           <div className="item">
-            <img src={Courses} alt="" />
-            <span>Courses</span>
+            <img src={Gallery} alt="" />
+            <span>Gallery</span>
+          </div>
+          <div className="item">
+            <img src={Gaming} alt="" />
+            <span>Gaming</span>
+          </div>
+
+          <div className="item">
+            <img src={Market} alt="" />
+            <span>Marketplace</span>
           </div>
         </div>
+        <hr />
       </div>
     </div>
   );
