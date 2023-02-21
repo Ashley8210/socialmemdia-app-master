@@ -9,10 +9,10 @@
     overflow: scroll;
     background-color: themed("bgSoft");
 
-    @include mobile{
+    @include mobile {
       display: none;
     }
-    @include tablet{
+    @include tablet {
       display: none;
     }
 
@@ -78,6 +78,10 @@
             display: flex;
             align-items: center;
             gap: 10px;
+
+            &:active {
+              transform: translateY(4px);
+            }
 
             button {
               border: none;
