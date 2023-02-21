@@ -1,7 +1,7 @@
 import "./leftBar.scss";
-import Friends from "../../assets/1.png";
-import Groups from "../../assets/2.png";
-import Market from "../../assets/3.png";
+import Friends from "../../assets/laugh.png";
+import Groups from "../../assets/teamwork.png";
+import Market from "../../assets/retailer.png";
 import Watch from "../../assets/4.png";
 import Memories from "../../assets/5.png";
 import Events from "../../assets/6.png";
@@ -16,7 +16,6 @@ import { AuthContext } from "../../context/authContext";
 import { useContext } from "react";
 
 const LeftBar = () => {
-
   const { user, setUser } = useContext(AuthContext);
 
   return (
@@ -24,10 +23,7 @@ const LeftBar = () => {
       <div className="container">
         <div className="menu">
           <div className="user">
-            <img
-              src={user.profilePic}
-              alt=""
-            />
+            <img src={user.profilePic} alt="" />
             <span>{user.name}</span>
           </div>
           <div className="item">
